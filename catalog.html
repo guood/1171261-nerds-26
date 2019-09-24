@@ -82,13 +82,13 @@
               </li>
             </ul>
           </fieldset>
-          <button class="search">Показать</button>
+          <button class="button search"><span>Показать</span></button>
         </form>
       </section>
-      <section>
-        <h2>Сортировать</h2>
-        <ul>
-          <li><a href="" aria-label="Сортировка по цене">По цене</a></li>
+      <section class="sorting">
+        <h2>Сортировать:</h2>
+        <ul class="sort-param">
+          <li><a href="" aria-label="Сортировка по цене" class="active">По цене</a></li>
           <li><a href="" aria-label="Сортировка по типу">По типу</a></li>
           <li><a href="" aria-label="Сортировка по названию">По называнию</a></li>
         </ul>
@@ -104,7 +104,7 @@
             <div class="catalog-item-info">
               <h3><a href="" aria-label="Открыть карточку шаблона Седона" class="catalog-item-name">Sedona</a></h3>
               <p>Информационный сайт для туристов</p>
-              <a href="" aria-label="Шаблон Седона. Цена 9900 рублей. Положить в корзину" class="price-button">9 900 руб.</a>
+              <a href="" aria-label="Шаблон Седона. Цена 9900 рублей. Положить в корзину" class="button price-button"><span>9 900 руб.</span></a>
             </div>
             <img src="img/templates/sedona.jpg" width="360" height="576" alt="Превью шаблона Седона">
           </li>
@@ -112,7 +112,7 @@
             <div class="catalog-item-info">
               <h3><a href="" aria-label="Шаблон пинк" class="catalog-item-name">Pink app</a></h3>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
-              <a href="" aria-label="Шаблон Пинк. Цена 9900 рублей. Положить в корзину" class="price-button">9 900 руб.</a>
+              <a href="" aria-label="Шаблон Пинк. Цена 9900 рублей. Положить в корзину" class="button price-button"><span>9 900 руб.</span></a>
             </div>
             <img src="img/templates/pink.jpg" width="360" height="576" alt="Превью шаблона Pink app">
           </li>
@@ -120,7 +120,7 @@
             <div class="catalog-item-info">
               <h3><a href="" aria-label="Шаблон барбершоп" class="catalog-item-name">Barbershop</a></h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
-              <a href="" aria-label="Шаблон Барбершоп. Цена 9900 рублей. Положить в корзину" class="price-button">9 900 руб.</a>
+              <a href="" aria-label="Шаблон Барбершоп. Цена 9900 рублей. Положить в корзину" class="button price-button"><span>9 900 руб.</span></a>
             </div>
             <img src="img/templates/barbershop.jpg" width="360" height="576" alt="Превью шаблона Барбершоп">
           </li>
@@ -128,7 +128,7 @@
             <div class="catalog-item-info">
               <h3><a href="" aria-label="Шаблон мишка" class="catalog-item-name">Mishka</a></h3>
               <p>Интернет-магазин вязаных игрушек</p>
-              <a href="" aria-label="Шаблон Мишка. Цена 9900 рублей. Положить в корзину" class="price-button">9 900 руб.</a>
+              <a href="" aria-label="Шаблон Мишка. Цена 9900 рублей. Положить в корзину" class="button price-button"><span>9 900 руб.</span></a>
             </div>
             <img src="img/templates/mishka.jpg" width="360" height="576" alt="Превью шаблона Мишка">
           </li>
@@ -136,7 +136,7 @@
             <div class="catalog-item-info">
               <h3><a href="" aria-label="Шаблон а плюс" class="catalog-item-name">A Plus</a></h3>
               <p>Лендинг курсов повышения квалификации</p>
-              <a href="" aria-label="Шаблон А плюс. Цена 9900 рублей. Положить в корзину" class="price-button">9 900 руб.</a>
+              <a href="" aria-label="Шаблон А плюс. Цена 9900 рублей. Положить в корзину" class="button price-button"><span>9 900 руб.</span></a>
             </div>
             <img src="img/templates/aplus.jpg" width="360" height="576" alt="Превью шаблона А плюс">
           </li>
@@ -144,26 +144,27 @@
             <div class="catalog-item-info">
               <h3><a href="" aria-label="Шаблон Квест" class="catalog-item-name">Кваст</a></h3>
               <p>Промо-сайт производителя крафтового кваса</p>
-              <a href="" aria-label="Шаблон Квест. Цена 9900 рублей. Положить в корзину" class="price-button">9 900 руб.</a>
+              <a href="" aria-label="Шаблон Квест. Цена 9900 рублей. Положить в корзину" class="button price-button"><span>9 900 руб.</span></a>
             </div>
             <img src="img/templates/kvast.jpg" width="360" height="576" alt="Превью шаблона Кваст">
           </li>
         </ul>
-        <ul>
-          <li><a>1</a></li>
-          <li><a href="" aria-label="Перейти на вторую страницу">2</a></li>
-          <li><a href="" aria-label="Перейти на третью страницу">3</a></li>
-          <li><a href="" aria-label="Перейти на следующую страницу">Следующая</a></li>
+        <ul class="pagination">
+          <li><a class="button active"><span>1</span></a></li>
+          <li><a href="" aria-label="Перейти на вторую страницу" class="button"><span>2</span></a></li>
+          <li><a href="" aria-label="Перейти на третью страницу" class="button"><span>3</span></a></li>
+          <li><a href="" aria-label="Перейти на следующую страницу" class="button"><span>Следующая</span></a></li>
         </ul>
       </section>
-      <section>
+      <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <p>NЁRDS DESIGN STUDIO</p>
-        <p>
+        <p class="company-name">NЁRDS DESIGN STUDIO</p>
+        <p class="address">
           191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8
         </p>
-        <p><a href="tel:88122757575" aria-label="Телефон компании +7 (812) 275-75-75">тел. +7 (812) 275-75-75</a></p>
+        <a href="tel:88122757575" aria-label="Телефон компании +7 (812) 275-75-75" class="phone">тел. +7 (812) 275-75-75</a>
+        <button type="button" class="button write-us-button"><span>Напишите нам</span></button>
         <img src="img/map.png" width="1440" height="416" alt="Офис компании по адресу 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         <img src="img/map-marker.png" width="231" height="190" alt="Маркер на карте">
       </section>
