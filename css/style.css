@@ -30,23 +30,50 @@ h1.catalog-h1 {
 }
 
 /* header */
-.main-navigation {
+.main-header {
+  margin: 0;
   background-color: #eeeeee;
+  margin-bottom: 18px;
+
+  /* временно для сетки */
+  background-color: transparent;
+  min-height: 114px;
 }
 
-.main-navigation ul {
+.main-navigation {
+
+}
+
+.site-navigation-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.site-navigation {
+  display: flex;
   list-style: none;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  /* временно для сетки */
 }
 
-.main-navigation a.logo {
+.site-navigation-item {
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.main-header-logo {
   margin: 0;
 }
 
-.main-navigation .logo:hover {
+.main-header-logo:hover {
    opacity: 0.8;
 }
 
-.main-navigation .logo:active {
+.main-header-logo:active {
    opacity: 0.3;
 }
 
@@ -70,29 +97,39 @@ h1.catalog-h1 {
   border-bottom: 2px solid #fb565a;
 }
 
+.main-header-cart {
+  margin-left: auto;
+}
+
 .write-us-popup {
   display: none;
 }
 
 /* slider */
-.slider ul {
-  list-style: none;
+.slider {
+
 }
 
-.slider .title {
+.slide-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-title {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
 }
 
-.slider .description {
+.slide-description {
   color: #283136;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.more-info-button {
+.slide-more-info-button {
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
@@ -100,17 +137,29 @@ h1.catalog-h1 {
   background-color: #fb565a;
 }
 
-.more-info-button:hover {
+.slide-more-info-button:hover {
   background-color: #e74246;
 }
 
-.more-info-button:active {
+.slide-more-info-button:active {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
 
-.more-info-button:active span {
+.slide-more-info-button:active span {
   opacity: 0.3;
+}
+
+.slide-img {
+
+}
+
+.slide-switch-button-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
  /* services */
@@ -458,4 +507,38 @@ h1.catalog-h1 {
   background-color: #d7373b;
 }
 
+
+/* сетка */
+
+/* временно для сетки */
+body {
+  background-image: url("../img/nerds-index.psd.png");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 2476px;
+}
+
+.container {
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-header {
+  display: flex;
+}
+
+.main-navigation {
+  display: flex;
+  margin-top: 49px;
+}
+
+.slider-wrapper {
+  margin: 0;
+  background-color: #eeeeee;
+
+  /* временно для сетки */
+  background-color: transparent;
+  min-height: 413px;
+}
 
