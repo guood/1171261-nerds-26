@@ -1,3 +1,23 @@
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,15 +34,24 @@ a {
 }
 
 h1.catalog-h1 {
+  margin: 0;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
   text-align: center;
   background-color: #eeeeee;
+  padding-top: 64px;
+  padding-bottom: 96px;
+
+  /* временно для сетки */
+  background-color: transparent;
 }
 
 .button {
   border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button:active span {
@@ -32,41 +61,39 @@ h1.catalog-h1 {
 /* header */
 .main-header {
   margin: 0;
+  padding: 0;
+  padding-top: 49px;
   background-color: #eeeeee;
   margin-bottom: 18px;
 
   /* временно для сетки */
   background-color: transparent;
-  min-height: 114px;
 }
 
 .main-navigation {
 
 }
 
-.site-navigation-wrapper {
-  width: 100%;
-  display: flex;
-}
-
 .site-navigation {
   display: flex;
   list-style: none;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
+  padding-left: 202px;
+  padding-right: 245px;
+  width: 100%;
+  justify-content: space-between;
   /* временно для сетки */
 }
 
 .site-navigation-item {
   margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 10px;
 }
 
 .main-header-logo {
   margin: 0;
+  min-width: 160px;
+  min-height: 65px;
 }
 
 .main-header-logo:hover {
@@ -99,6 +126,7 @@ h1.catalog-h1 {
 
 .main-header-cart {
   margin-left: auto;
+  padding-top: 10px;
 }
 
 .write-us-popup {
@@ -116,25 +144,96 @@ h1.catalog-h1 {
   padding: 0;
 }
 
+.slide {
+}
+
+.slide-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-1 .slide-info {
+  width: 380px;
+}
+
+.slide-2 .slide-info {
+  width: 520px;
+}
+
+.slide-3 .slide-info {
+  width: 410px;
+}
+
 .slide-title {
+  margin: 0;
+  padding: 0;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
+  margin-bottom: 28px;
+
+  /* временно для сетки */
+  min-height: 106px;
+  min-width: 376px;
+}
+
+.slide-1 .slide-title {
+  margin-top: 60px;
+}
+
+.slide-2 .slide-title {
+  margin-top: 60px;
+}
+
+.slide-3 .slide-title {
+  margin-top: 60px;
 }
 
 .slide-description {
+  margin: 0;
+  padding: 0;
   color: #283136;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+
+  /* временно для сетки */
+  min-height: 40px;
+  /*min-width: 361px;*/
+}
+
+.slide-1 .slide-description {
+  width: 361px;
+}
+
+.slide-2 .slide-description {
+  width: 410px;
+}
+
+.slide-3 .slide-description {
+  width: 345px;
 }
 
 .slide-more-info-button {
+  margin: 0;
+  margin-top: 38px;
+  padding: 0;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   background-color: #fb565a;
+  display: flex;
+  width: 140px;
+  height: 50px;
+
+  /* временно для сетки */
+  min-width: 240px;
+  min-height: 50px;
+}
+
+.slide-more-info-button span {
+
 }
 
 .slide-more-info-button:hover {
@@ -166,74 +265,115 @@ h1.catalog-h1 {
 .services {
   background-color: #ffffff;
   border-bottom: 2px solid #eeeeee;
+
+  /* временно для сетки */
+  min-height: 507px;
+  /* временно для сетки */
+  background-color: transparent;
 }
 
-.services ul {
+.service-list {
   list-style: none;
+  margin: 0;
+  padding: 80px 0;
+  display: flex;
+
+  /* временно для сетки */
+  background-color: transparent;
 }
 
-.services h3 {
+.service {
+  width: 300px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+
+  /* временно для сетки */
+  margin-top: 146px;
+}
+
+.service:last-child {
+  margin-right: 0;
+}
+
+.service h3 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
   line-height: 30px;
 }
 
-.services p {
+.service p {
   color: #283136;
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
 }
 
-.services a {
+.service-button {
   color: #ffffff;
   font-weight: 500;
   line-height: 18px;
-  text-align: center;
+  width: 160px;
+  height: 50px;
 }
 
-.services a.order-web-site {
+.service .order-web-site {
   background-color: #fb565a;
 }
 
-.services a.order-web-site:hover {
+.service .order-web-site:hover {
+  width: 160px;
   background-color: #e74246;
 }
 
-.services a.order-web-site:active {
+.service .order-web-site:active {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
 
-.services a.order-app {
+.service .order-app {
   background-color: #00ca74;
 }
 
-.services a.order-app:hover {
+.service .order-app:hover {
   background-color: #00bc6c;
 }
 
-.services a.order-app:active {
+.service .order-app:active {
    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #00aa62;
 }
 
-.services a.order-presentation {
+.service .order-presentation {
   background-color: #efc84a;
 }
 
-.services a.order-presentation:hover {
+.service .order-presentation:hover {
   background-color: #eab534;
 }
 
-.services a.order-presentation:active {
+.service .order-presentation:active {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #e5a722;
 }
 
+/* о нас и статистика */
+.about-us-and-stats {
+  display: flex;
+  border-bottom: 2px solid #eeeeee;
+  /* временно для сетки */
+  min-height: 525px;
+}
+
+/*  about us */
 .about-us {
   background-color: #ffffff;
+  width: 660px;
+  padding: 40px 0px;
+
+  /* временно для сетки */
+  background-color: transparent;
 }
 
 .about-us ul {
@@ -270,11 +410,25 @@ h1.catalog-h1 {
 
 /* statistics */
 
-.statistics ul {
-  list-style: none;
+.statistics {
+  margin-left: auto;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+
+  /* временно для сетки */
+  padding-top: 250px;
 }
 
-.statistics .title {
+.statistics-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.statistics-title {
   color: #000000;
   font-size: 16px;
   font-weight: 700;
@@ -302,8 +456,22 @@ h1.catalog-h1 {
 }
 
 /* clients */
-.clients ul {
+.clients {
+  border-bottom: 2px solid #eeeeee;
+
+  /* временно для сетки */
+  min-height: 180px;
+}
+
+.client-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 43px;
+  padding-left: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .clients img {
@@ -319,26 +487,54 @@ h1.catalog-h1 {
 }
 
 /* footer */
-.footer ul {
-  list-style: none;
+.footer {
+  display: flex;
+
 }
 
-.footer .lets-be-friend {
+.footer-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 260px;
+}
+
+.footer-info {
+  margin-left: 139px;
+}
+
+.footer-lets-be-friend {
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
 }
 
-.footer .discount {
+.footer-discount {
   color: #444444;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
 }
 
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* filter */
+.filter {
+  width: 261px;
+}
+
+.filter fieldset {
+  border: none;
+}
+
 .filter ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .filter legend {
@@ -380,15 +576,35 @@ h1.catalog-h1 {
   background-color: #d5d5d5;
 }
 
+.catalog-data-column {
+  display: flex;
+  flex-direction: column;
+  width: 760px;
+}
+
 /* sorting */
+.sorting {
+  display: flex;
+}
+
 .sorting ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .sorting h2 {
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.sort-param {
+  margin-left: 267px;
+  border: 1px solid black;
+  width: 100%;
 }
 
 .sort-param a {
@@ -408,13 +624,35 @@ h1.catalog-h1 {
   opacity: 1.0;
 }
 
-/* catalog */
-.catalog-item-info {
-  background-color: #eeeeee;
+.sort-direction {
+  display: flex;
 }
 
-.catalog ul {
+/* catalog */
+.catalog-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-item {
+  margin-right: 40px;
+  margin-bottom: 33px;
+  width: 360px;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.catalog-item-info {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .catalog-item-name {
@@ -446,6 +684,8 @@ h1.catalog-h1 {
   line-height: 18px;
   text-transform: uppercase;
   background-color: #fb565a;
+  width: 200px;
+  height: 50px;
 }
 
 .catalog-item-info .price-button:hover {
@@ -456,6 +696,15 @@ h1.catalog-h1 {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
 }
+
+/* pagination */
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 
 .pagination .button {
   font-weight: 500;
@@ -479,6 +728,21 @@ h1.catalog-h1 {
 }
 
 /* map */
+.map {
+
+  /* временно для сетки */
+  min-height: 496px;
+}
+
+.map-info {
+  display: flex;
+  flex-direction: column;
+  padding: 54px 50px 47px 50px;
+  background-color: white;
+  width: 319px;
+  height: 308px;
+}
+
 .map .company-name {
   font-size: 18px;
   font-weight: 700;
@@ -494,8 +758,11 @@ h1.catalog-h1 {
 }
 
 .map .write-us-button {
+  width: 219px;
+  height: 50px;
   color: #ffffff;
   background-color: #fb565a;
+  text-transform: uppercase;
 }
 
 .map .write-us-button:hover {
@@ -510,12 +777,12 @@ h1.catalog-h1 {
 
 /* сетка */
 
-/* временно для сетки */
 body {
-  background-image: url("../img/nerds-index.psd.png");
-  background-position-x: center;
-  background-repeat: no-repeat;
-  height: 2476px;
+  /* временно для сетки */
+  /*background-image: url("../img/nerds-catalog.psd.png");*/
+  /*background-position-x: center;*/
+  /*background-repeat: no-repeat;*/
+  /*height: 2476px;*/
 }
 
 .container {
@@ -530,7 +797,7 @@ body {
 
 .main-navigation {
   display: flex;
-  margin-top: 49px;
+  align-items: center;
 }
 
 .slider-wrapper {

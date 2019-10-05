@@ -113,6 +113,29 @@ body > * > * > * > * > *::before {
   background: purple;
 }
 
+body > * > * > * > * > * > * {
+  background: rgba(128, 0, 128, 0.2);
+  box-shadow: inset 0 0 0 2px aqua;
+}
+
+body > * > * > * > * > * > *::before {
+  color: white;
+
+  background: aqua;
+}
+
+body > * > * > * > * > * > * > * {
+  background: rgba(128, 0, 128, 0.2);
+  box-shadow: inset 0 0 0 2px #00aa62;
+}
+
+body > * > * > * > * > * > * > *::before {
+  color: white;
+
+  background: #00aa62;
+}
+
+
 .main-header::before {
   content: ".main-header";
   top: auto;
