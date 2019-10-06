@@ -37,7 +37,6 @@ h1.catalog-h1 {
   margin: 0;
   font-size: 55px;
   font-weight: 500;
-  line-height: 55px;
   text-align: center;
   background-color: #eeeeee;
   padding-top: 64px;
@@ -68,10 +67,6 @@ h1.catalog-h1 {
 
   /* временно для сетки */
   background-color: transparent;
-}
-
-.main-navigation {
-
 }
 
 .site-navigation {
@@ -105,9 +100,14 @@ h1.catalog-h1 {
 }
 
 .main-navigation a {
+  padding: 0;
+  margin: 0;
   color: #000000;
-  line-height: 30px;
   text-transform: uppercase;
+}
+
+.site-navigation-item a {
+
 }
 
 .main-navigation a:hover {
@@ -169,7 +169,6 @@ h1.catalog-h1 {
   padding: 0;
   font-size: 55px;
   font-weight: 500;
-  line-height: 55px;
   margin-bottom: 28px;
 
   /* временно для сетки */
@@ -195,7 +194,6 @@ h1.catalog-h1 {
   color: #283136;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
 
   /* временно для сетки */
   min-height: 40px;
@@ -221,7 +219,6 @@ h1.catalog-h1 {
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-  line-height: 18px;
   background-color: #fb565a;
   display: flex;
   width: 140px;
@@ -300,20 +297,17 @@ h1.catalog-h1 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
-  line-height: 30px;
 }
 
 .service p {
   color: #283136;
   font-size: 16px;
   font-weight: normal;
-  line-height: 24px;
 }
 
 .service-button {
   color: #ffffff;
   font-weight: 500;
-  line-height: 18px;
   width: 160px;
   height: 50px;
 }
@@ -383,18 +377,15 @@ h1.catalog-h1 {
 .about-us .title {
   font-size: 45px;
   font-weight: 500;
-  line-height: 45px;
 }
 
 .about-us .description {
   color: #283136;
   font-weight: 400;
-  line-height: 24px;
 }
 
 .about-us .our-services {
   font-size: 16px;
-  line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -405,7 +396,6 @@ h1.catalog-h1 {
 
 .about-us li {
   font-weight: 400;
-  line-height: 24px;
 }
 
 /* statistics */
@@ -432,7 +422,6 @@ h1.catalog-h1 {
   color: #000000;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
   text-transform: uppercase;
 }
 
@@ -440,7 +429,6 @@ h1.catalog-h1 {
   color: #000000;
   font-size: 45px;
   font-weight: 700;
-  line-height: 10.06px;
 }
 
 .stat-param-value span {
@@ -452,7 +440,6 @@ h1.catalog-h1 {
   color: #283136;
   font-size: 16px;
   font-weight: 400;
-  line-height: 18px;
 }
 
 /* clients */
@@ -507,14 +494,12 @@ h1.catalog-h1 {
 .footer-lets-be-friend {
   font-size: 36px;
   font-weight: 700;
-  line-height: 36px;
 }
 
 .footer-discount {
   color: #444444;
   font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
 }
 
 .catalog-columns {
@@ -540,14 +525,12 @@ h1.catalog-h1 {
 .filter legend {
   font-size: 18px;
   font-weight: 700;
-  line-height: 30px;
   text-transform: uppercase;
 }
 
 .filter label {
   color: #283136;
   font-weight: 400;
-  line-height: 20px;
 }
 
 .filter label:hover {
@@ -560,19 +543,16 @@ h1.catalog-h1 {
 
 .filter .search {
   font-weight: 500;
-  line-height: 18px;
   background-color: #eeeeee;
 }
 
 .filter .search:hover {
   font-weight: 500;
-  line-height: 18px;
   background-color: #dfdfdf;
 }
 
 .filter .search:active {
   font-weight: 500;
-  line-height: 18px;
   background-color: #d5d5d5;
 }
 
@@ -587,30 +567,27 @@ h1.catalog-h1 {
   display: flex;
 }
 
-.sorting ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
 .sorting h2 {
   font-size: 18px;
   font-weight: 700;
-  line-height: 18px;
 }
 
 .sort-param {
-  margin-left: 267px;
-  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  padding-left: 285px;
 }
 
 .sort-param a {
+  color: #000000;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
   text-transform: uppercase;
   opacity: 0.3;
 }
@@ -625,7 +602,11 @@ h1.catalog-h1 {
 }
 
 .sort-direction {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
+  align-items: center;
 }
 
 /* catalog */
@@ -658,7 +639,6 @@ h1.catalog-h1 {
 .catalog-item-name {
   font-size: 18px;
   font-weight: 700;
-  line-height: 30px;
   text-transform: uppercase;
 }
 
@@ -674,14 +654,12 @@ h1.catalog-h1 {
 .catalog-item-info p {
   color: #666666;
   font-weight: 400;
-  line-height: 18px;
 }
 
 .catalog-item-info .price-button {
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-  line-height: 18px;
   text-transform: uppercase;
   background-color: #fb565a;
   width: 200px;
@@ -708,7 +686,6 @@ h1.catalog-h1 {
 
 .pagination .button {
   font-weight: 500;
-  line-height: 18px;
   background-color: #eeeeee;
 }
 
@@ -746,7 +723,6 @@ h1.catalog-h1 {
 .map .company-name {
   font-size: 18px;
   font-weight: 700;
-  line-height: 30px;
   text-transform: uppercase;
 }
 
@@ -754,7 +730,6 @@ h1.catalog-h1 {
 .map .phone{
   color: #666666;
   font-weight: 400;
-  line-height: 18px;
 }
 
 .map .write-us-button {
@@ -776,14 +751,6 @@ h1.catalog-h1 {
 
 
 /* сетка */
-
-body {
-  /* временно для сетки */
-  /*background-image: url("../img/nerds-catalog.psd.png");*/
-  /*background-position-x: center;*/
-  /*background-repeat: no-repeat;*/
-  /*height: 2476px;*/
-}
 
 .container {
   width: 1160px;

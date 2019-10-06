@@ -1,0 +1,7 @@
+body {
+  /* временно для сетки */
+  background-image: url("../img/nerds-catalog.psd.png");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 2476px;
+}
