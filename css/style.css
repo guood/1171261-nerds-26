@@ -3,7 +3,7 @@
 }
 
 html {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 .content-box {
@@ -12,10 +12,18 @@ html {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
@@ -47,15 +55,19 @@ h1.catalog-h1 {
 }
 
 .button {
+  display: inline-block;
   border-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 16px 0;
+  border-radius: 3px;
+  height: 50px;
 }
 
-.button:active span {
-  opacity: 0.3;
-}
+/*.button:active {*/
+/*  opacity: 0.3;*/
+/*}*/
 
 /* header */
 .main-header {
@@ -63,7 +75,6 @@ h1.catalog-h1 {
   padding: 0;
   padding-top: 49px;
   background-color: #eeeeee;
-  margin-bottom: 18px;
 
   /* временно для сетки */
   background-color: transparent;
@@ -71,24 +82,21 @@ h1.catalog-h1 {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
+  margin-right: 45px;
+  margin-top: 17px;
   padding: 0;
-  padding-left: 202px;
-  padding-right: 245px;
-  width: 100%;
+  width: 438px;
   justify-content: space-between;
-  /* временно для сетки */
-}
-
-.site-navigation-item {
-  margin-top: 10px;
 }
 
 .main-header-logo {
   margin: 0;
   min-width: 160px;
   min-height: 65px;
+  display: block;
 }
 
 .main-header-logo:hover {
@@ -100,14 +108,11 @@ h1.catalog-h1 {
 }
 
 .main-navigation a {
-  padding: 0;
-  margin: 0;
   color: #000000;
   text-transform: uppercase;
 }
 
 .site-navigation-item a {
-
 }
 
 .main-navigation a:hover {
@@ -125,8 +130,21 @@ h1.catalog-h1 {
 }
 
 .main-header-cart {
-  margin-left: auto;
-  padding-top: 10px;
+  position: relative;
+  margin-top: 17px;
+  padding-left: 40px;
+}
+
+.main-header-cart::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icons/cart.svg");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  top: 2px;
+  left: 0;
+  opacity: 0.3;
 }
 
 .write-us-popup {
@@ -135,7 +153,11 @@ h1.catalog-h1 {
 
 /* slider */
 .slider {
+  position: relative;
+  background-color: #eeeeee;
 
+  /* впемееер */
+  background-color: transparent;
 }
 
 .slide-list {
@@ -145,23 +167,9 @@ h1.catalog-h1 {
 }
 
 .slide {
-}
-
-.slide-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.slide-1 .slide-info {
-  width: 380px;
-}
-
-.slide-2 .slide-info {
-  width: 520px;
-}
-
-.slide-3 .slide-info {
-  width: 410px;
+  display: none;
+  padding-top: 78px;
+  padding-bottom: 80px;
 }
 
 .slide-title {
@@ -169,99 +177,100 @@ h1.catalog-h1 {
   padding: 0;
   font-size: 55px;
   font-weight: 500;
-  margin-bottom: 28px;
-
-  /* временно для сетки */
-  min-height: 106px;
-  min-width: 376px;
-}
-
-.slide-1 .slide-title {
-  margin-top: 60px;
-}
-
-.slide-2 .slide-title {
-  margin-top: 60px;
-}
-
-.slide-3 .slide-title {
-  margin-top: 60px;
+  margin-bottom: 27px;
+  line-height: 55px;
+  max-width: 520px;
 }
 
 .slide-description {
   margin: 0;
+  margin-bottom: 38px;
   padding: 0;
   color: #283136;
   font-size: 16px;
   font-weight: 400;
-
-  /* временно для сетки */
-  min-height: 40px;
-  /*min-width: 361px;*/
-}
-
-.slide-1 .slide-description {
-  width: 361px;
-}
-
-.slide-2 .slide-description {
-  width: 410px;
-}
-
-.slide-3 .slide-description {
-  width: 345px;
+  line-height: 24px;
+  max-width: 420px;
 }
 
 .slide-more-info-button {
-  margin: 0;
-  margin-top: 38px;
-  padding: 0;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
   background-color: #fb565a;
-  display: flex;
-  width: 140px;
-  height: 50px;
-
-  /* временно для сетки */
   min-width: 240px;
   min-height: 50px;
+  max-width: 400px;
 }
 
-.slide-more-info-button span {
-
-}
-
-.slide-more-info-button:hover {
+.slide-more-info-button:hover,
+.slide-more-info-button:focus {
   background-color: #e74246;
 }
 
 .slide-more-info-button:active {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.slide-more-info-button:active span {
-  opacity: 0.3;
+.slide:nth-child(1) {
+  display: block;
+  /*background-image: url("../img/slider/slide1.png");*/
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
 }
 
-.slide-img {
-
+.slide:nth-child(2) {
+  /*display: block;*/
+  background-image: url("../img/slider/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0px;
 }
 
-.slide-switch-button-list {
-  display: flex;
-  justify-content: center;
+.slide:nth-child(3) {
+  /*display: block;*/
+  background-image: url("../img/slider/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 18px;
+}
+
+.slider-controls {
+  position: absolute;
   list-style: none;
   margin: 0;
   padding: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 86px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-control-item {
+  position: relative;
+  cursor: pointer;
+  padding: 18px;
+}
+
+.slider-control-item::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  left: 9px;
+  top: 9px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
  /* services */
 .services {
   background-color: #ffffff;
   border-bottom: 2px solid #eeeeee;
+  padding: 80px 0;
 
   /* временно для сетки */
   min-height: 507px;
@@ -272,7 +281,8 @@ h1.catalog-h1 {
 .service-list {
   list-style: none;
   margin: 0;
-  padding: 80px 0;
+  padding: 0;
+  padding-top: 80px;
   display: flex;
 
   /* временно для сетки */
@@ -280,13 +290,10 @@ h1.catalog-h1 {
 }
 
 .service {
+  position: relative;
   width: 300px;
   margin-right: 100px;
-  display: flex;
-  flex-direction: column;
-
-  /* временно для сетки */
-  margin-top: 146px;
+  padding-top: 173px;
 }
 
 .service:last-child {
@@ -294,6 +301,9 @@ h1.catalog-h1 {
 }
 
 .service h3 {
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
@@ -302,69 +312,107 @@ h1.catalog-h1 {
 .service p {
   color: #283136;
   font-size: 16px;
-  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 31px;
+  font-weight: 400;
 }
 
 .service-button {
   color: #ffffff;
   font-weight: 500;
   width: 160px;
-  height: 50px;
 }
 
-.service .order-web-site {
+.service-order-web-site::before {
+  content: "";
+  width: 300px;
+  height: 146px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("../img/services/web-sites.jpg");
+  background-repeat: no-repeat;
+}
+
+.service-order-app::before {
+  content: "";
+  width: 300px;
+  height: 146px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url("../img/services/apps.jpg");
+  background-repeat: no-repeat;
+}
+
+.service-order-presentation::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 146px;
+  left: 0;
+  top: 0;
+  background-image: url("../img/services/presentations.jpg");
+  background-repeat: no-repeat;
+}
+
+.service-order-web-site-button {
+  width: 160px;
   background-color: #fb565a;
 }
 
-.service .order-web-site:hover {
-  width: 160px;
+.service-order-web-site-button:hover,
+.service-order-web-site-button:focus {
   background-color: #e74246;
 }
 
-.service .order-web-site:active {
+.service-order-web-site-button:active {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.service .order-app {
+.service-order-app-button {
   background-color: #00ca74;
 }
 
-.service .order-app:hover {
+.service-order-app-button:hover,
+.service-order-app-button:focus {
   background-color: #00bc6c;
 }
 
-.service .order-app:active {
+.service-order-app-button:active {
    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #00aa62;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.service .order-presentation {
+.service-order-presentation-button {
   background-color: #efc84a;
 }
 
-.service .order-presentation:hover {
+.service-order-presentation-button:hover,
+.service-order-presentation-button:focus {
   background-color: #eab534;
 }
 
-.service .order-presentation:active {
+.service-order-presentation-button:active {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #e5a722;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* о нас и статистика */
 .about-us-and-stats {
   display: flex;
   border-bottom: 2px solid #eeeeee;
-  /* временно для сетки */
-  min-height: 525px;
 }
 
 /*  about us */
 .about-us {
   background-color: #ffffff;
   width: 660px;
-  padding: 40px 0px;
+  padding: 78px 0 76px;
 
   /* временно для сетки */
   background-color: transparent;
@@ -374,51 +422,82 @@ h1.catalog-h1 {
   list-style: none;
 }
 
-.about-us .title {
+.about-us-title {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
   font-size: 45px;
   font-weight: 500;
+  line-height: 45px;
 }
 
-.about-us .description {
+.about-us-description {
   color: #283136;
   font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 37px;
 }
 
-.about-us .our-services {
+.about-us-our-services {
+  padding: 0;
+  margin: 0;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 24px;
 }
 
-.about-us ul {
+.about-us-our-service-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.about-us li {
+.about-us-our-service-list li {
   font-weight: 400;
+  line-height: 24px;
+  padding-top: 24px;
+  padding-left: 36px;
 }
 
 /* statistics */
 
 .statistics {
+  position: relative;
   margin-left: auto;
   width: 360px;
-  display: flex;
-  flex-direction: column;
+  padding-top: 289px;
+  padding-bottom: 76px;
+}
 
-  /* временно для сетки */
-  padding-top: 250px;
+.statistics::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 208px;
+  top: 43px;
+  left: 0;
+  background-image: url("../img/stats.png");
+  background-repeat: no-repeat;
 }
 
 .statistics-list {
   list-style: none;
   margin: 0;
   padding: 0;
-
   display: flex;
+  flex-wrap: wrap;
+}
+
+.statistics-item {
+  width: 120px;
+  padding-top: 42px;
 }
 
 .statistics-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
   color: #000000;
   font-size: 16px;
   font-weight: 700;
@@ -426,6 +505,9 @@ h1.catalog-h1 {
 }
 
 .stat-param-value {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
   color: #000000;
   font-size: 45px;
   font-weight: 700;
@@ -437,6 +519,8 @@ h1.catalog-h1 {
 }
 
 .stat-param-name {
+  padding: 0;
+  margin: 0;
   color: #283136;
   font-size: 16px;
   font-weight: 400;
@@ -446,19 +530,16 @@ h1.catalog-h1 {
 .clients {
   border-bottom: 2px solid #eeeeee;
 
-  /* временно для сетки */
-  min-height: 180px;
 }
 
 .client-list {
   list-style: none;
   margin: 0;
-  padding: 0;
-  padding-right: 43px;
-  padding-left: 31px;
+  padding: 44px 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .clients img {
@@ -623,6 +704,7 @@ h1.catalog-h1 {
   margin-right: 40px;
   margin-bottom: 33px;
   width: 360px;
+  align-items: stretch;
 }
 
 .catalog-item:nth-child(2n) {
@@ -753,10 +835,14 @@ h1.catalog-h1 {
 /* сетка */
 
 .container {
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  /*width: 1200px;*/
+  /*margin: 0 auto;*/
+  /*padding: 0 20px;*/
+
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;}
 
 .main-header {
   display: flex;
@@ -765,14 +851,5 @@ h1.catalog-h1 {
 .main-navigation {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.slider-wrapper {
-  margin: 0;
-  background-color: #eeeeee;
-
-  /* временно для сетки */
-  background-color: transparent;
-  min-height: 413px;
-}
-
