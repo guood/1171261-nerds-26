@@ -26,6 +26,11 @@ html {
   overflow: hidden;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -94,6 +99,7 @@ h1.catalog-h1 {
 
 .main-header-logo {
   margin: 0;
+  padding: 0;
   min-width: 160px;
   min-height: 65px;
   display: block;
@@ -412,7 +418,7 @@ h1.catalog-h1 {
 .about-us {
   background-color: #ffffff;
   width: 660px;
-  padding: 78px 0 76px;
+  padding: 78px 0 74px;
 
   /* временно для сетки */
   background-color: transparent;
@@ -467,7 +473,7 @@ h1.catalog-h1 {
   margin-left: auto;
   width: 360px;
   padding-top: 289px;
-  padding-bottom: 76px;
+  padding-bottom: 74px;
 }
 
 .statistics::before {
@@ -535,15 +541,15 @@ h1.catalog-h1 {
 .client-list {
   list-style: none;
   margin: 0;
-  padding: 44px 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
 }
 
 .clients img {
   opacity: 0.2;
+  display: block;
 }
 
 .clients img:hover {
@@ -552,6 +558,30 @@ h1.catalog-h1 {
 
 .clients img:active {
   opacity: 0.1;
+}
+
+.client-item {
+  position: relative;
+  margin-right: 40px;
+}
+
+.client-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.client-item::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 52px;
+  left: 280px;
+  top: 63px;
+  background-color: #eeeeee;
+}
+
+.client-item:nth-child(4n)::after {
+  content: "";
+  width: 0;
 }
 
 /* footer */
@@ -793,6 +823,10 @@ h1.catalog-h1 {
   min-height: 496px;
 }
 
+.map-img {
+  max-width: 1160px;
+}
+
 .map-info {
   display: flex;
   flex-direction: column;
@@ -815,8 +849,8 @@ h1.catalog-h1 {
 }
 
 .map .write-us-button {
-  width: 219px;
-  height: 50px;
+  min-width: 219px;
+  min-height: 50px;
   color: #ffffff;
   background-color: #fb565a;
   text-transform: uppercase;
@@ -842,7 +876,8 @@ h1.catalog-h1 {
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+}
 
 .main-header {
   display: flex;
