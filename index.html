@@ -142,27 +142,26 @@
       </div>
     </footer>
 
-    <section class="write-us-popup">
+    <section class="modal modal-write-us">
       <h2>Напишите нам</h2>
       <form method="post" action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <legend>Напишите нам</legend>
-          <p>
+        <div class="write-us-form-fields">
+          <p class="write-us-form-field">
             <label for="write-us-name">Ваше имя</label>
-            <input id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
+            <input id="write-us-name" type="text" name="name" placeholder="Имя Фамилия" class="text-field">
           </p>
-          <p>
+          <p class="write-us-form-field">
             <label for="write-us-email" aria-label="Адерс вашей электронной почты">Ваш e-mail</label>
-            <input id="write-us-email" type="text" name="email" placeholder="email@example.com">
+            <input id="write-us-email" type="text" name="email" placeholder="email@example.com" class="write-us-invalid-value" value="невалидное значение">
           </p>
-          <p>
+          <p class="write-us-form-field">
             <label for="write-us-text">Текст письма</label>
-            <textarea id="write-us-text" name="text" placeholder="В свободной форме"></textarea>
+            <textarea id="write-us-text" name="text" placeholder="В свободной форме" class="write-us-comment"></textarea>
           </p>
-          <button>Отправить</button>
-        </fieldset>
+        </div>
+        <button class="button modal-write-us-send-button">Отправить</button>
       </form>
-      <button type="button" aria-label="Закрыть"></button>
+      <button type="button" aria-label="Закрыть" class="modal-close-button"></button>
     </section>
   </body>
 </html>
