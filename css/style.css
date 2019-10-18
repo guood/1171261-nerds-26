@@ -48,15 +48,15 @@ a {
 
 h1.catalog-h1 {
   margin: 0;
+  padding: 75px 0 103px;
   font-size: 55px;
   font-weight: 500;
   text-align: center;
   background-color: #eeeeee;
-  padding-top: 64px;
-  padding-bottom: 96px;
 
   /* временно для сетки */
   background-color: transparent;
+
 }
 
 .button {
@@ -156,7 +156,7 @@ h1.catalog-h1 {
 /* popup */
 
 .modal {
-  display: block;
+  display: none;
   position: fixed;
 }
 
@@ -207,6 +207,7 @@ h1.catalog-h1 {
 }
 
 .modal-write-us {
+  /*display: block;*/
   box-sizing: border-box;
   z-index: 100;
   top: 120px;
@@ -821,7 +822,6 @@ h1.catalog-h1 {
 
 .footer-info {
   width: 760px;
-  box-shadow: inset 0 0 0 2px #00bc6c;
   align-self: stretch;
   padding-top: 74px;
 }
@@ -845,7 +845,9 @@ p.footer-discount {
   margin-top: 10px;
 }
 
-.catalog-columns {
+/* TODO убрать div */
+div.catalog-columns {
+  padding-top: 60px;
   display: flex;
   justify-content: space-between;
 }
@@ -857,6 +859,8 @@ p.footer-discount {
 
 .filter fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .filter ul {
@@ -911,8 +915,12 @@ p.footer-discount {
 }
 
 .sorting h2 {
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .sort-param {
