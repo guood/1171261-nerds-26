@@ -1400,6 +1400,7 @@ div.catalog-columns {
 .page-button:active {
   box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
   background-color: #d5d5d5;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .page-active-button,
