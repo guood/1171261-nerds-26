@@ -197,37 +197,26 @@ h1.catalog-h1 {
   background-color: transparent;
 }
 
-.modal-close-button::before,
-.modal-close-button::after {
+.modal-close-button::before {
   position: absolute;
   content: "";
   top: 9px;
   left: 2px;
-  width: 25px;
-  height: 3px;
-  background-color: #fb565a;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icons/close-cross.svg");
   background-position: 0 0;
   opacity: 0.3;
 }
 
 .modal-close-button:hover,
-.modal-close-button:hover::before,
-.modal-close-button:hover::after {
+.modal-close-button:hover::before {
   opacity: 1.0;
 }
 
 .modal-close-button:active,
-.modal-close-button:active::before,
-.modal-close-button:active::after {
-  opacity: 0.1;
-}
-
-.modal-close-button::before {
-  transform: rotate(45deg);
-}
-
-.modal-close-button::after {
-  transform: rotate(-45deg);
+.modal-close-button:active::before {
+  opacity: 0.2;
 }
 
 .modal-write-us {
@@ -311,7 +300,7 @@ h1.catalog-h1 {
   color: #e74246;
 }
 
-.modal-write-us input[type = 'text'] {
+.modal-write-us input[type = "text"] {
   width: 360px;
   height: 50px;
 }
@@ -469,7 +458,7 @@ h1.catalog-h1 {
   width: 8px;
   height: 8px;
   left: 50%;
-  top: 50%;
+  top: calc(50% - 1px);
   margin-left: -4px;
   margin-top: -3px;
   border-radius: 50%;
@@ -537,7 +526,7 @@ h1.catalog-h1 {
   padding: 0;
   text-transform: uppercase;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .service p {
@@ -695,7 +684,7 @@ h1.catalog-h1 {
 
 .statistics-item {
   width: 120px;
-  padding-top: 42px;
+  padding-top: 40px;
 }
 
 .statistics-title {
@@ -721,8 +710,11 @@ h1.catalog-h1 {
 }
 
 .stat-param-value span {
-  vertical-align: super;
-  font-size: 24px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .stat-param-name {
@@ -984,7 +976,8 @@ p.footer-discount {
   width: 80px;
   height: 38px;
   background-color: #eeeeee;
-  border: none;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
   margin-left: 12px;
 
   color: #283136;
@@ -1016,10 +1009,6 @@ p.footer-discount {
   margin-left: 1px;
 }
 
-.filter-value-item {
-  margin-top: 15px;
-}
-
 .filter-grid-value-list li:first-child,
 .filter-optional-value-list li:first-child {
   margin-top: 0;
@@ -1039,28 +1028,18 @@ p.footer-discount {
   line-height: 30px;
 }
 
-.filter-grid label,
+.filter-radio-label,
 .filter-optionals label {
   color: #283136;
   font-weight: 400;
 }
 
-.filter-grid label:hover,
-.filter-optionals label:hover {
-  color: #283136;
-}
-
-.filter-grid label:active,
-.filter-optionals label:active {
-  opacity: 0.3;
-}
-
-.filter-radio,
-.filter-checkbox {
+.filter-value-item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .radio-indicator,
@@ -1069,24 +1048,13 @@ p.footer-discount {
   opacity: 0.4;
   width: 25px;
   height: 25px;
-  top: 0;
-  left: 0;
   background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.filter-radio:hover .radio-indicator,
+.filter-radio-label:hover .radio-indicator,
 .filter-checkbox:hover .checkbox-indicator {
   opacity: 1.0;
-}
-
-.filter-radio:active,
-.filter-checkbox:active {
-  opacity: 0.3;
-}
-
-.filter-radio:active .radio-indicator,
-.filter-checkbox:active .checkbox-indicator {
-  opacity: 0.1;
 }
 
 .filter-radio input[type="radio"] + .radio-indicator {
@@ -1103,6 +1071,11 @@ p.footer-discount {
 
 .filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
   background-image: url("../img/icons/checkbox-on.svg");
+}
+
+.filter-radio input[type="radio"]:disabled + .radio-indicator,
+.filter-checkbox input[type="checkbox"]:disabled + .checkbox-indicator {
+  opacity: 0.1;
 }
 
 .filter-search {
@@ -1362,8 +1335,6 @@ p.footer-discount {
   margin-right: 11px;
   margin-bottom: 11px;
 
-  border: 3px solid transparent;
-
   background-color: #eeeeee;
 
   min-width: 50px;
@@ -1386,6 +1357,7 @@ p.footer-discount {
   background-color: #ffffff;
   border: 3px solid #dbdbdb;
   box-shadow: none;
+  color: #000000;
 }
 
 .next-page-button {
