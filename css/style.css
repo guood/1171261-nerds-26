@@ -1284,8 +1284,6 @@ p.footer-discount {
   display: flex;
 }
 
-
-
 .catalog-item-name {
   margin: 0;
   padding: 0;
@@ -1474,4 +1472,9 @@ p.footer-discount {
   background-image: url("../img/map-marker.png");
   background-repeat: no-repeat;
   background-position: -135px 0;
+}
+
+.interaction-map {
+  width: 100%;
+  border: none;
 }
