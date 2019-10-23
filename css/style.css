@@ -1196,30 +1196,30 @@ p.footer-discount {
   align-items: center;
 }
 
-.catalog-sort-direction-button polyline,
 .catalog-sort-direction-button polygon {
   fill: #a6a6a6;
   opacity: 0.2;
 }
 
-.catalog-sort-direction-button:hover polyline,
-.catalog-sort-direction-button:hover polygon {
+.catalog-sort-direction-button:hover polygon,
+.catalog-sort-direction-button svg:hover polygon,
+.catalog-sort-direction-button svg polygon:hover {
   fill: #a6a6a6;
   opacity: 1.0;
 }
 
-.catalog-sort-direction-button:active polyline,
-.catalog-sort-direction-button:active polygon {
+.catalog-sort-direction-button:active polygon,
+.catalog-sort-direction-button svg:active polygon,
+.catalog-sort-direction-button svg polygon:active {
   fill: #231F20;
   opacity: 1.0;
 }
 
 .catalog-sort-direction-active-button polygon,
-.catalog-sort-direction-active-button polyline,
 .catalog-sort-direction-active-button:hover polygon,
-.catalog-sort-direction-active-button:hover polyline,
 .catalog-sort-direction-active-button:active polygon,
-.catalog-sort-direction-active-button:active polyline {
+.catalog-sort-direction-active-button:hover svg polygon,
+.catalog-sort-direction-active-button:active svg polygon {
   fill: #231F20;
   opacity: 1.0;
 }
