@@ -10,16 +10,16 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation container">
-        <a href="index.html" aria-label="Перейти на главную страницу">
+        <a href="index.html">
           <img src="img/logo.svg" width="160" height="65" alt="Логотип Nerds" class="main-header-logo">
         </a>
-        <ul class="site-navigation">
-          <li><a href="" class="site-navigation-item">Студия</a></li>
-          <li><a href="" class="site-navigation-item">Клиенты</a></li>
-          <li><a class="site-navigation-item active-page">Магазин</a></li>
-          <li><a href="" class="site-navigation-item">Контакты</a></li>
+        <ul class="site-navigation" aria-label="главное меню">
+          <li><a href="" class="site-navigation-item" aria-label="Перейти на страницу с информацией о студии">Студия</a></li>
+          <li><a href="" class="site-navigation-item" aria-label="Перейти на страницу с информацией о клиентах">Клиенты</a></li>
+          <li><a class="site-navigation-item active-page" aria-label="Перейти на страницу магаина">Магазин</a></li>
+          <li><a href="" class="site-navigation-item" aria-label="Перейти на страницу контактов">Контакты</a></li>
         </ul>
-        <a href="" class="main-header-cart"><span>Корзина</span></a>
+        <a href="" class="main-header-cart" aria-label="Перейти в корзину"><span>Корзина</span></a>
       </nav>
     </header>
     <main class="main-content">
@@ -35,8 +35,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
+                  <div tabindex="0" class="toggle toggle-min" aria-label="Фильтр цены. Сумма от"></div>
+                  <div tabindex="0" class="toggle toggle-max" aria-label="Фильтр цены. Сумма до"></div>
                 </div>
                 <div class="price-controls">
                   <label>
@@ -52,16 +52,16 @@
               <legend>Сетка:</legend>
               <ul class="filter-grid-value-list">
                 <li class="filter-value-item">
-                  <input type="radio" id="filter-layout-adaptive-input" name="layout" value="adaptive" class="visually-hidden filter-radio-input" checked>
-                  <label for="filter-layout-adaptive-input" aria-label="Выбрать адаптивные шаблоны" class="filter-radio-label">Адаптивная</label>
+                  <input type="radio" id="filter-layout-adaptive-input" tabindex="-1"  name="layout" value="adaptive" class="visually-hidden filter-radio-input" checked>
+                  <label for="filter-layout-adaptive-input" tabindex="0" aria-label="Выбрать адаптивные шаблоны" class="filter-radio-label">Адаптивная</label>
                 </li>
                 <li class="filter-value-item">
-                  <input type="radio" id="filter-layout-fix-input" name="layout" value="fix" class="visually-hidden filter-radio-input" disabled>
+                  <input type="radio" id="filter-layout-fix-input" tabindex="-1" name="layout" value="fix" class="visually-hidden filter-radio-input" disabled>
                   <label  for="filter-layout-fix-input" aria-label="Выбрать только шаблоны с фиксированной сеткой" class="filter-radio-label">Фиксированная</label>
                 </li>
                 <li class="filter-value-item filter-radio">
-                  <input type="radio" id="filter-layout-float-input" name="layout" value="float" class="visually-hidden filter-radio-input">
-                  <label for="filter-layout-float-input" aria-label="Выбрать шаблоны с плавающей сеткой" class="filter-radio-label">Резиновая</label>
+                  <input type="radio" id="filter-layout-float-input" tabindex="-1" name="layout" value="float" class="visually-hidden filter-radio-input">
+                  <label for="filter-layout-float-input" tabindex="0" aria-label="Выбрать шаблоны с плавающей сеткой" class="filter-radio-label">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
@@ -69,28 +69,28 @@
               <legend>Особенности:</legend>
               <ul class="filter-optional-value-list">
                 <li class="filter-value-item">
-                  <input type="checkbox" id="filter-characteristic-slider-input" name="characteristic-slider"  class="visually-hidden filter-checkbox-input" checked>
-                  <label for="filter-characteristic-slider-input" aria-label="Включить в результаты поиска шаблоны со слайдером" class="filter-checkbox-label">Слайдер</label>
+                  <input type="checkbox" id="filter-characteristic-slider-input" tabindex="-1" name="characteristic-slider"  class="visually-hidden filter-checkbox-input" checked>
+                  <label for="filter-characteristic-slider-input" tabindex="0" aria-label="Включить в результаты поиска шаблоны со слайдером" class="filter-checkbox-label">Слайдер</label>
                 </li>
                 <li class="filter-value-item">
-                  <input type="checkbox" id="filter-characteristic-advantage-block-input" name="characteristic-advantage-block" class="visually-hidden filter-checkbox-input" disabled>
+                  <input type="checkbox" id="filter-characteristic-advantage-block-input" tabindex="-1" name="characteristic-advantage-block" class="visually-hidden filter-checkbox-input" disabled>
                   <label for="filter-characteristic-advantage-block-input" aria-label="Включить в раезультаты поиска шаблоны с блоком преимуществ" class="filter-checkbox-label">Блок преимуществ</label>
                 </li>
                 <li class="filter-value-item">
-                  <input type="checkbox" id="filter-characteristic-news-input" name="characteristic-news" class="visually-hidden filter-checkbox-input" checked>
-                  <label for="filter-characteristic-news-input" aria-label="Включить в раезультаты поиска шаблоны с блоком новостей" class="filter-checkbox-label">Новости</label>
+                  <input type="checkbox" id="filter-characteristic-news-input" tabindex="-1" name="characteristic-news" class="visually-hidden filter-checkbox-input" checked>
+                  <label for="filter-characteristic-news-input" tabindex="0" aria-label="Включить в раезультаты поиска шаблоны с блоком новостей" class="filter-checkbox-label">Новости</label>
                 </li>
                 <li class="filter-value-item">
-                  <input type="checkbox" id="filter-characteristic-gallery-input" name="characteristic-gallery" class="visually-hidden filter-checkbox-input">
-                  <label  for="filter-characteristic-gallery-input" aria-label="Включить в раезультаты поиска шаблоны с галереей" class="filter-checkbox-label">Галерея</label>
+                  <input type="checkbox" id="filter-characteristic-gallery-input" tabindex="-1" name="characteristic-gallery" class="visually-hidden filter-checkbox-input">
+                  <label  for="filter-characteristic-gallery-input" tabindex="0" aria-label="Включить в раезультаты поиска шаблоны с галереей" class="filter-checkbox-label">Галерея</label>
                 </li>
                 <li class="filter-value-item">
-                  <input type="checkbox" id="filter-characteristic-cart-input" name="characteristic-cart" class="visually-hidden filter-checkbox-input">
-                  <label for="filter-characteristic-cart-input" aria-label="Включить в раезультаты поиска шаблоны с корзиной" class="filter-checkbox-label">Корзина</label>
+                  <input type="checkbox" id="filter-characteristic-cart-input" tabindex="-1" name="characteristic-cart" class="visually-hidden filter-checkbox-input">
+                  <label for="filter-characteristic-cart-input" tabindex="0" aria-label="Включить в раезультаты поиска шаблоны с корзиной" class="filter-checkbox-label">Корзина</label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button filter-search">Показать</button>
+            <button class="button filter-search" aria-label="Показать результаты поиска">Показать</button>
           </form>
         </section>
         <div class="catalog-data-column">
@@ -104,7 +104,7 @@
             <ul class="catalog-sort-direction">
               <li>
                 <a title="По убыванию" aria-label="Сортировать по убыванию" class="catalog-sort-direction-button catalog-sort-direction-active-button">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="catalog-sort-direction-icon-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                        width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                     <polygon fill="#231F20" points="5.5,10 0,0 11,0 "/>
                   </svg>
@@ -112,7 +112,7 @@
               </li>
               <li>
                 <a href="" title="По возрастанию" aria-label="Сортировать по возрастанию" class="catalog-sort-direction-button">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="catalog-sort-direction-icon-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                        width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                     <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
                   </svg>
@@ -191,7 +191,7 @@
               ул. Б. Конюшенная, д. 19/8
             </p>
             <a href="tel:88122757575" aria-label="Телефон компании +7 (812) 275-75-75" class="phone">тел. +7 (812) 275-75-75</a>
-            <a href="write-us.html" class="button write-us-button">Напишите нам</a>
+            <a href="write-us.html" aria-label="Открыть форму обратной связи" class="button write-us-button">Напишите нам</a>
           </div>
         </div>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3ab31337ad12fa3754bb7daf60eca96ed3af1ef84506f58a4726b277173950d&amp;source=constructor" height="416" class="interaction-map"></iframe>

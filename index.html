@@ -14,12 +14,12 @@
           <img src="img/logo.svg" width="160" height="65" alt="Логотип nerds" class="main-header-logo">
         </a>
         <ul class="site-navigation">
-          <li><a href="" class="site-navigation-item">Студия</a></li>
-          <li><a href="" class="site-navigation-item">Клиенты</a></li>
-          <li><a href="catalog.html" class="site-navigation-item">Магазин</a></li>
-          <li><a href="" class="site-navigation-item">Контакты</a></li>
+          <li><a href="" class="site-navigation-item" aria-label="Перейти на страницу с информацией о студии">Студия</a></li>
+          <li><a href="" class="site-navigation-item" aria-label="Перейти на страницу с информацией о клиентах">Клиенты</a></li>
+          <li><a href="catalog.html" class="site-navigation-item" aria-label="Перейти на страницу магазина">Магазин</a></li>
+          <li><a href="" class="site-navigation-item" aria-label="Перейти на страницу контактов">Контакты</a></li>
         </ul>
-        <a href="" class="main-header-cart"><span>Корзина</span></a>
+        <a href="" class="main-header-cart" aria-label="Перейти в корзину"><span>Корзина</span></a>
       </nav>
     </header>
     <main class="main-content">
@@ -27,13 +27,13 @@
       <section class="slider">
         <div class="container">
           <h2 class="visually-hidden">Слайдер</h2>
-          <input type="radio" name="slider-toggle" id="slide-1" class="visually-hidden" checked>
-          <input type="radio" name="slider-toggle" id="slide-2" class="visually-hidden">
-          <input type="radio" name="slider-toggle" id="slide-3" class="visually-hidden">
+          <input type="radio" tabindex="-1" name="slider-toggle" id="slide-1" class="visually-hidden slide-input-1" checked>
+          <input type="radio" tabindex="-1" name="slider-toggle" id="slide-2" class="visually-hidden slide-input-2">
+          <input type="radio" tabindex="-1" name="slider-toggle" id="slide-3" class="visually-hidden slide-input-3">
           <div class="slider-controls">
-            <label aria-label="Перейти на первый слайд" class="slider-control-item" for="slide-1"></label>
-            <label aria-label="Перейти на второй слайд" class="slider-control-item" for="slide-2"></label>
-            <label aria-label="Перейти на третий слайд" class="slider-control-item" for="slide-3"></label>
+            <label tabindex="0" aria-label="Перейти на первый слайд" class="slider-control-item" for="slide-1"></label>
+            <label tabindex="0" aria-label="Перейти на второй слайд" class="slider-control-item" for="slide-2"></label>
+            <label tabindex="0" aria-label="Перейти на третий слайд" class="slider-control-item" for="slide-3"></label>
           </div>
           <ul class="slide-list">
             <li class="slide">
@@ -108,10 +108,10 @@
       <section class="clients container">
         <h2 class="visually-hidden">Клиенты</h2>
         <ul class="client-list">
-          <li class="client-item"><a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайта Html Academy"><img src="img/clients/html-academy-logo.png" width="199" height="68" alt="Логотип Html Academy"></a></li>
-          <li class="client-item"><a href="" aria-label="Перейти на сайт барбершоп Бородинский"><img src="img/clients/borodinski-logo.png" width="209" height="90" alt="Логотип Барбершоп Бородинский"></a></li>
-          <li class="client-item"><a href=""><img src="img/clients/pink-logo.png" width="185" height="52" alt="Логотип A Pink"></a></li>
-          <li class="client-item"><a href=""><img src="img/clients/mishka-logo.png" width="173" height="84" alt="Логотип Интернет-магазин Мишка"></a></li>
+          <li class="client-item"><a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайта Html Academy" class="client-button"><img src="img/clients/html-academy-logo.png" width="199" height="68" alt="Логотип Html Academy"></a></li>
+          <li class="client-item"><a href="#" aria-label="Перейти на сайт барбершоп Бородинский" class="client-button"><img src="img/clients/borodinski-logo.png" width="209" height="90" alt="Логотип Барбершоп Бородинский"></a></li>
+          <li class="client-item"><a href="#" aria-label="Перейти на сайт пинк" class="client-button"><img src="img/clients/pink-logo.png" width="185" height="52" alt="Логотип A Pink"></a></li>
+          <li class="client-item"><a href="#" aria-label="Перейти на сайт магазина Мишка" class="client-button"><img src="img/clients/mishka-logo.png" width="173" height="84" alt="Логотип Интернет-магазин Мишка"></a></li>
         </ul>
       </section>
       <section class="map">
@@ -124,7 +124,7 @@
               ул. Б. Конюшенная, д. 19/8
             </p>
             <a href="tel:88122757575" aria-label="Телефон компании +7 (812) 275-75-75" class="phone">тел. +7 (812) 275-75-75</a>
-            <a href="write-us.html" class="button write-us-button">Напишите нам</a>
+              <a href="write-us.html" class="button write-us-button" aria-label="Открыть форму обратной связи">Напишите нам</a>
           </div>
         </div>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3ab31337ad12fa3754bb7daf60eca96ed3af1ef84506f58a4726b277173950d&amp;source=constructor" height="416" class="interaction-map"></iframe>
@@ -161,7 +161,7 @@
         </div>
         <button class="button modal-write-us-send-button">Отправить</button>
       </form>
-      <button type="button" aria-label="Закрыть" class="modal-close-button"></button>
+      <button type="button" aria-label="Закрыть форму" class="modal-close-button"></button>
     </section>
     <script src="js/script-min.js"></script>
   </body>
